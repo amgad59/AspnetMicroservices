@@ -1,5 +1,5 @@
-using Discount.API.Repositories;
-using Discount.API.Extensions;
+using Discount.Grpc.Repositories;
+using Discount.Grpc.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
