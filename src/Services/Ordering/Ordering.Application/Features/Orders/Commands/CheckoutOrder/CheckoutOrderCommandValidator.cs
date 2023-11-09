@@ -1,0 +1,28 @@
+﻿using FluentValidation;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ordering.Application.Features.Orders.Commands.CheckoutOrder
+{
+    public class CheckoutOrderCommandValidator : AbstractValidator<CheckoutOrderCommand>
+    {
+        public CheckoutOrderCommandValidator()
+        {
+            RuleFor(p => p.UserName)
+                .NotEmpty().WithMessage("username is required")
+                .NotNull()
+                .MaximumLength(50).WithMessage("username must be less than 50 characters");
+
+
+            RuleFor(p => p.EmailAddress)
+                .NotEmpty().WithMessage("Email is required");
+
+            RuleFor(p => p.TotalPrice)
+                .NotEmpty().WithMessage("TotalPrice can't be empty")
+                .GreaterThan(50).WithMessage("TotalPrice can't be equal to 0");
+        }
+    }
+}
