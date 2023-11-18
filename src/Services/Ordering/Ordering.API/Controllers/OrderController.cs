@@ -35,7 +35,7 @@ namespace Ordering.API.Controllers
             var result = await _mediator.Send(command);
             return Ok(result);
         }
-        [HttpPost(Name = "UpdateOrder")]
+        [HttpPut(Name = "UpdateOrder")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesDefaultResponseType]

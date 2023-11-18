@@ -17,7 +17,7 @@ namespace Ordering.Infrastructure.Persistance
                 orderContext.Orders.AddRange(
                     new List<Order>
                     {
-                        new Order() {UserName = "swn", FirstName = "Mehmet", LastName = "Ozkaya", EmailAddress = "ezozkme@gmail.com", AddressLine = "Bahcelievler", Country = "Turkey", TotalPrice = 350 }
+                        new Order() {UserName = "swn", FirstName = "amgad", LastName = "Aly", EmailAddress = "amgad@gmail.com", AddressLine = "Gesr elsuiz", Country = "Egypt", TotalPrice = 350 }
                     }
                 );
                 await orderContext.SaveChangesAsync();
